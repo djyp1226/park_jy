@@ -1,7 +1,20 @@
 $(document).ready(function () {
-    //인트로 화면 먼저
-    $('#intro').on('click', function () {
+    //배경음악 제어
+    $("#cnt1 .bgm button").on('click', function () {
+        if ($(this).hasClass('bgm_play')) play_audio('play');
+        else play_audio('stop');
     });
+
+    $("#bgmAudio").trigger('load');
+    function play_audio(task) {
+        if(task === 'play'){
+             $("#bgmAudio").trigger('play');
+        }
+        if(task === 'stop'){
+             $("#bgmAudio").trigger('pause');
+             $("#bgmAudio").prop("currentTime",0);
+        }
+   }
 
     // 인트로
     var _typing = $('#typing p');
@@ -42,25 +55,4 @@ $(document).ready(function () {
         $(this).delay(delay).show(10);
     });
 
-    //메인 음악
-    $('#cnt1 .bgm button').on('click', function () {
-        $(this).toggleClass('music');
-        
-        if ($(this).hasClass('music')) {
-            var audio = new Audio('assets/music/HansZimmer_FirstStep.ogg');
-            audio.loop = true; // 반복재생
-            audio.volume = 0.5; // 음량 설정
-            audio.play(); // 재생
-            $(this).hide().sibling('button').show();
-        } 
-        else if (!$(this).hasClass('music')) {
-            audio.pause();
-            $(this).hide().sibling('button').show();
-        }
-        else {
-            // 멈추기가 안된다
-            e.preventDefault();
-        }
-        console.log($(this));
-    });
 });
