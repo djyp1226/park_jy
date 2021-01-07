@@ -1,0 +1,166 @@
+#wrap {
+  overflow: hidden; }
+
+#cnt1 .contect_1 {
+  width: 100vw;
+  height: 100vh;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  background-size: cover !important;
+  background-position: center;
+  background-image: url("../images/contect/contect_bg.png"); }
+  #cnt1 .contect_1 h1 {
+    position: relative;
+    top: calc(50% - 15px);
+    left: 80%;
+    font-size: 30px; }
+    #cnt1 .contect_1 h1::before {
+      content: "";
+      display: inline-block;
+      width: 0px;
+      height: 3px;
+      position: absolute;
+      top: 49%;
+      left: -30%;
+      background: #ffffff; }
+  #cnt1 .contect_1:hover h1::before, #cnt1 .contect_1:focus h1::before {
+    width: 480px;
+    -webkit-transition: all 1.3s;
+    -moz-transition: all 1.3s;
+    -o-transition: all 1.3s;
+    transition: all 1.3s; }
+#cnt1 .c1_txt {
+  margin-left: 150px;
+  margin-top: 500px;
+  font-size: 20px;
+  line-height: 3.2; }
+#cnt1 .c1_en {
+  position: absolute;
+  transition: top .75s;
+  top: 0;
+  z-index: 1; }
+#cnt1 .c1_ko {
+  display: none;
+  position: absolute;
+  transition: top .75s;
+  top: 100%;
+  z-index: 1; }
+
+#cnt2 {
+  width: 100vw;
+  height: 100vh;
+  cursor: default;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  background-size: cover !important;
+  background-position: bottom left;
+  background-image: url("../images/contect/contect_bg_2.png"); }
+  #cnt2 h1 {
+    display: inline-block;
+    font-size: 180px;
+    padding-left: 300px;
+    padding-top: 200px;
+    line-height: 1.2; }
+  #cnt2 .introduce {
+    display: inline-block;
+    padding-left: 150px;
+    height: 648px; }
+    #cnt2 .introduce li {
+      font-size: 25px;
+      width: 800px;
+      height: 180px;
+      line-height: 180px; }
+      #cnt2 .introduce li strong {
+        display: inline-block;
+        font-weight: 400;
+        width: 300px;
+        text-align: center; }
+      #cnt2 .introduce li p {
+        display: inline-block;
+        padding-left: 20px; }
+      #cnt2 .introduce li + li {
+        border-top: 1px solid #999A9C; }
+
+#cnt3 {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  cursor: default;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  background-size: cover !important;
+  background-position: top left;
+  background-image: url("../images/contect/contect_bg_3.png"); }
+  #cnt3 h2 {
+    padding-top: 150px;
+    margin-left: 300px;
+    font-size: 120px; }
+  #cnt3 .skill_box {
+    margin-left: 150px;
+    margin-top: 100px; }
+    #cnt3 .skill_box li {
+      display: inline-block;
+      text-align: center;
+      height: 85px;
+      line-height: 80px;
+      position: relative; }
+      #cnt3 .skill_box li strong {
+        display: inline-block;
+        text-align: center; }
+      #cnt3 .skill_box li p {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 80px;
+        color: rgba(255, 255, 255, 0.2);
+        position: absolute;
+        top: 0;
+        left: 0; }
+      #cnt3 .skill_box li:hover strong, #cnt3 .skill_box li:focus strong {
+        color: rgba(255, 255, 255, 0.2);
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s; }
+      #cnt3 .skill_box li:hover p, #cnt3 .skill_box li:focus p {
+        color: #ffffff;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
+    #cnt3 .skill_box .skill_top {
+      width: 400px; }
+      #cnt3 .skill_box .skill_top p {
+        width: 400px; }
+    #cnt3 .skill_box .skill_btm {
+      width: 320px;
+      margin-top: 80px; }
+      #cnt3 .skill_box .skill_btm p {
+        width: 320px; }
+  #cnt3 .stream {
+    width: 100vw; }
+    #cnt3 .stream h3 {
+      display: inline-block;
+      font-size: 80px;
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      white-space: nowrap;
+      height: 150px;
+      line-height: 150px;
+      animation: stream 20s linear infinite; }
+@keyframes stream {
+  from {
+    transform: translateX(20%); }
+  to {
+    transform: translateX(-100%); } }
+    #cnt3 .stream::after {
+      content: "";
+      background: #ffffff;
+      width: 100vw;
+      height: 5px;
+      display: block;
+      bottom: 150px;
+      left: 0px;
+      position: absolute; }
+
+/*# sourceMappingURL=sub.css.map */

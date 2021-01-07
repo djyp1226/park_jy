@@ -1,0 +1,54 @@
+@charset "utf-8";
+@import "_var", "_mixin";
+
+#header{
+    position: fixed; top: 0; right: 0; z-index: 10000; width: 100%;
+    .logo{
+        padding: 50px;
+        a{display: block; width: 100px;
+            img{width: 100px;height: 100px;}
+        }
+    }
+    #nav_box{
+        position: absolute; top: 0; right: 50px; width: 100vw; height: 100vh;
+        .btn_box{width: 80px;height: 80px; text-align: center; font-size: 18px; line-height: 80px; letter-spacing: 5px;border: 1px solid #ffffff; position: absolute; top: 50px;right: 50px;
+        &:focus,&:hover{background: #ffffff; color: #000000;@include transition(all 0.3s);}
+        }
+        .dep1{display: none;}
+    }
+
+    #nav_box.on{
+        // display: none;
+        background: url("../images/common/nav_hover_bg.png")  no-repeat; background-size: cover;
+        .btn_box{width: 80px;height: 80px; text-align: center; font-size: 18px; line-height: 80px; letter-spacing: 5px;border: 1px solid #000000; position: absolute; top: 50px;right: 750px; background: #ffffff; color: #000000;}
+        #gnb{  
+            background: #000000 !important;
+            width: 750px;height: 100vh; font-family: PaintChocolate; font-size: 70px;padding-top: 20px;
+            position: absolute; top: 0;right: -50px; 
+            .dep1{display: block;}
+            li{
+                position: relative;height: 280px; width: 100%; line-height: 300px;  
+                a{display: block; width: 100%; height: 100%;padding-left: 130px; color: $gray;
+                    &::after{content: "";position: absolute;top: 95px;left: 60px;width: 10px;height: 100px;background: #F4EBDC;}
+                }
+                a:hover, a:focus{
+                    @include transition(all 1s);
+                    z-index: 1;color: #ffffff; 
+                    &::after{display: none;}
+                }
+            }
+            
+            .nav1{
+                height:350px; line-height: 400px;border: 1px solid yellow;/*  */
+                a::after{top: 150px;}
+                a:hover, a:focus{background: url("../images/common/nav_hover_1.png") 60px 0px no-repeat;}
+            }
+            .nav2{
+                a:hover, a:focus{background: url("../images/common/nav_hover_2.png") 60px 0px no-repeat;}
+            }
+            .nav3{
+                a:hover, a:focus{background: url("../images/common/nav_hover_3.png") 60px 0px no-repeat;}
+            }
+        }
+    }
+}

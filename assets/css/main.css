@@ -1,0 +1,249 @@
+#intro {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  font-family: FiraCode;
+  font-size: 50px; }
+  #intro #typing {
+    display: inline-block;
+    text-align: center;
+    width: 100vw;
+    height: 100%;
+    margin: 0 auto; }
+    #intro #typing p {
+      display: inline-block;
+      line-height: 100vh; }
+    #intro #typing span {
+      color: #F6E25D; }
+  #intro #caret {
+    display: inline-block;
+    animation-name: cursor;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite; }
+@keyframes cursor {
+  from {
+    border-bottom: 5px solid #fff; }
+  50% {
+    border-bottom: 5px solid #272727; }
+  to {
+    border-bottom: 5px solid #fff; } }
+#index {
+  width: 100vw;
+  height: 100vh;
+  position: relative; }
+  #index .main_bg {
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    background-size: cover !important;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/main/main_bg.png"); }
+  #index .bg_shapes {
+    display: inline;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: shapes 30s linear infinite; }
+@keyframes shapes {
+  0% {
+    transform: translateY(10%); }
+  50% {
+    transform: translateY(-10%); }
+  100% {
+    transform: translateY(10%); } }
+  #index .bgm {
+    text-align: center;
+    padding-top: 75px;
+    width: 80%;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 10%; }
+    #index .bgm p {
+      display: inline-block; }
+    #index .bgm button {
+      display: inline-block;
+      cursor: pointer; }
+    #index .bgm .bgm_play {
+      background: green; }
+    #index .bgm .bgm_pause {
+      background: red; }
+  #index .left_menu {
+    position: absolute;
+    top: 520px;
+    left: -210px;
+    transform: rotate(90deg); }
+    #index .left_menu li {
+      display: inline-block; }
+      #index .left_menu li + li {
+        margin-left: 65px; }
+  #index .rotate {
+    display: inline-block;
+    margin-top: -4%;
+    margin-left: 3%;
+    width: 80px;
+    height: 50px; }
+  #index .center {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 1500px;
+    height: 400px;
+    top: -70%;
+    left: 50px;
+    clip: rect(1px, 1px, 1px, 1px); }
+    #index .center strong {
+      display: none;
+      font-size: 50px;
+      -webkit-text-stroke: 1px #000000;
+      text-stroke: 1px #000000;
+      width: 100%;
+      position: absolute;
+      top: calc(50% - 25px);
+      left: 0; }
+    #index .center > img {
+      display: inline-block;
+      width: 1300px;
+      height: 400px; }
+    #index .center .center_menu {
+      display: inline-block;
+      background: green; }
+      #index .center .center_menu li {
+        display: inline-block;
+        position: absolute; }
+        #index .center .center_menu li > img {
+          width: 200px;
+          height: 200px; }
+        #index .center .center_menu li .on {
+          display: none;
+          border: 5px solid #ffffff;
+          font-family: PaintChocolate;
+          font-size: 80px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          padding: 15px 30px; }
+      #index .center .center_menu .whale {
+        animation: whale_ani 50s linear 0s infinite normal; }
+        #index .center .center_menu .whale > img {
+          width: 330px; }
+      #index .center .center_menu .earth {
+        animation: earth_ani 50s linear 0s infinite normal; }
+      #index .center .center_menu .moon {
+        animation: moon_ani 50s linear 0s infinite normal; }
+@keyframes whale_ani {
+  0% {
+    top: -50px;
+    left: 600px; }
+  10% {
+    top: -50px;
+    left: 400px; }
+  20% {
+    top: 0px;
+    left: 80px; }
+  30% {
+    top: 95px;
+    left: 15px; }
+  40% {
+    top: 195px;
+    left: 125px; }
+  50% {
+    top: 270px;
+    left: 470px; }
+  60% {
+    top: 255px;
+    left: 805px; }
+  70% {
+    top: 270px;
+    left: 950px; }
+  80% {
+    top: 50px;
+    left: 1210px; }
+  90% {
+    top: -30px;
+    left: 950px; }
+  100% {
+    top: -50px;
+    left: 600px; } }
+@keyframes earth_ani {
+  0% {
+    top: 195px;
+    left: 125px; }
+  10% {
+    top: 270px;
+    left: 470px; }
+  20% {
+    top: 255px;
+    left: 805px; }
+  30% {
+    top: 270px;
+    left: 950px; }
+  40% {
+    top: 50px;
+    left: 1210px; }
+  50% {
+    top: -30px;
+    left: 950px; }
+  60% {
+    top: -50px;
+    left: 600px; }
+  70% {
+    top: -50px;
+    left: 400px; }
+  80% {
+    top: 0px;
+    left: 80px; }
+  90% {
+    top: 95px;
+    left: 15px; }
+  100% {
+    top: 195px;
+    left: 125px; } }
+@keyframes moon_ani {
+  0% {
+    top: 50px;
+    left: 1210px; }
+  10% {
+    top: -30px;
+    left: 950px; }
+  20% {
+    top: -50px;
+    left: 600px; }
+  30% {
+    top: -50px;
+    left: 400px; }
+  40% {
+    top: 0px;
+    left: 80px; }
+  50% {
+    top: 95px;
+    left: 15px; }
+  60% {
+    top: 195px;
+    left: 125px; }
+  70% {
+    top: 270px;
+    left: 470px; }
+  80% {
+    top: 255px;
+    left: 805px; }
+  90% {
+    top: 270px;
+    left: 950px; }
+  100% {
+    top: 85px;
+    left: 1210px; } }
+  #index .right {
+    writing-mode: vertical-rl;
+    text-orientation: upright; }
+    #index .right p {
+      display: inline-block;
+      position: absolute;
+      letter-spacing: 20px; }
+      #index .right p:nth-child(1) {
+        top: 170px;
+        right: 90px; }
+      #index .right p:nth-child(2) {
+        top: 550px;
+        right: 50px; }
+
+/*# sourceMappingURL=main.css.map */

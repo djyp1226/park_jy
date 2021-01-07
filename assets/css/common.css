@@ -1,0 +1,118 @@
+@font-face {
+  font-family: NtSansKR;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../font/NotoSansKR-Regular.eot");
+  src: url("../font/NotoSansKR-Regular.eot#iefix") format("embedded-opentype"), url("../font/NotoSansKR-Regular.woff2") format("woff2"), url("../font/NotoSansKR-Regular.woff") format("woff"), url("../font/NotoSansKR-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: Retroica;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../font/Retroica.eot");
+  src: url("../font/Retroica.eot#iefix") format("embedded-opentype"), url("../font/Retroica.woff2") format("woff2"), url("../font/Retroica.woff") format("woff"), url("../font/Retroica.ttf") format("truetype"); }
+@font-face {
+  font-family: PaintChocolate;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../font/PaintingWithChocolate.eot");
+  src: url("../font/PaintingWithChocolate.eot#iefix") format("embedded-opentype"), url("../font/PaintingWithChocolate.woff2") format("woff2"), url("../font/PaintingWithChocolate.woff") format("woff"), url("../font/PaintingWithChocolate.ttf") format("truetype"); }
+@font-face {
+  font-family: FiraCode;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../font/FiraCode-Regular.eot");
+  src: url("../font/FiraCode-Regular.eot#iefix") format("embedded-opentype"), url("../font/FiraCode-Regular.woff2") format("woff2"), url("../font/FiraCode-Regular.woff") format("woff"), url("../font/FiraCode-Regular.ttf") format("truetype"); }
+body, h1, h2, h3, h4, h5, p, ul, button, form {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5 {
+  font-size: 100%; }
+
+ul {
+  list-style: none; }
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: inherit; }
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit; }
+
+img {
+  border: none;
+  vertical-align: top; }
+
+img {
+  max-width: 100%; }
+
+header, nav, section, aside, footer {
+  display: block; }
+
+.f_l {
+  float: left; }
+
+.f_r {
+  float: right; }
+
+.p_r {
+  position: relative; }
+
+.p_a {
+  position: absolute; }
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.blind-b {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  border: none;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%); }
+
+#skip a {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  z-index: 10001; }
+  #skip a:focus {
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 600;
+    color: #000000; }
+
+body {
+  font-family: Retroica, NtSansKR;
+  font-size: 25px;
+  color: #ffffff;
+  line-height: 1;
+  font-weight: 400;
+  background: #000000; }
+  body * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+.outline {
+  color: transparent;
+  -webkit-text-stroke: 0.1px #999A9C;
+  text-stroke: 0.1px #999A9C; }
+
+/*# sourceMappingURL=common.css.map */
