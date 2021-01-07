@@ -15,6 +15,23 @@ $(document).ready(function () {
              $("#bgmAudio").prop("currentTime",0);
         }
    }
+    
+    /* 이렇게 해도 됨
+    var bgm = document.getElementById("bgmAudio");
+
+    function playAudio() {
+        bgm.play();
+    }
+
+    function pauseAudio() {
+        bgm.pause();
+    }
+
+    $("#cnt1 .bgm button").on('click', function () {
+        if ($(this).hasClass('bgm_play')) playAudio();
+        else pauseAudio();
+    });
+    */
 
     // 인트로
     var _typing = $('#typing p');
