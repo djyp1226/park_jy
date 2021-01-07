@@ -1,6 +1,6 @@
 $(document).ready(function () {
     //배경음악 제어
-    $("#cnt1 .bgm button").on('click', function () {
+    $("#index .bgm button").on('click', function () {
         if ($(this).hasClass('bgm_play')) play_audio('play');
         else play_audio('stop');
     });
