@@ -1,37 +1,8 @@
 $(document).ready(function () {
-    //배경음악 제어
-    $("#index .bgm button").on('click', function () {
-        if ($(this).hasClass('bgm_play')) play_audio('play');
-        else play_audio('stop');
+    //인트로 화면 먼저
+    $('#intro').on('click', function () {
+        $('#intro').css('display', 'none');
     });
-
-    $("#bgmAudio").trigger('load');
-    function play_audio(task) {
-        if(task === 'play'){
-             $("#bgmAudio").trigger('play');
-        }
-        if(task === 'stop'){
-             $("#bgmAudio").trigger('pause');
-             $("#bgmAudio").prop("currentTime",0);
-        }
-   }
-    
-    /* 이렇게 해도 됨
-    var bgm = document.getElementById("bgmAudio");
-
-    function playAudio() {
-        bgm.play();
-    }
-
-    function pauseAudio() {
-        bgm.pause();
-    }
-
-    $("#cnt1 .bgm button").on('click', function () {
-        if ($(this).hasClass('bgm_play')) playAudio();
-        else pauseAudio();
-    });
-    */
 
     // 인트로
     var _typing = $('#typing p');
@@ -55,9 +26,9 @@ $(document).ready(function () {
         }
     });
     //5) 글자를 표시하기 전의 지연 시간(ms)
-    var delayStart = 50;
+    var delayStart = 100;
     //6) 타이핑 속도(ms)
-    var speed = 150;
+    var speed = 180;
     //7) 글자들을 보이지 않게 설정한 다음 한 글자씩 화면에 표시
     _typing.children().hide().each(function (index) {
         var delay = delayStart + speed * index;
@@ -72,4 +43,25 @@ $(document).ready(function () {
         $(this).delay(delay).show(10);
     });
 
+
+
+    //메인 음악
+
+        $('#index .bgm button').on('click', function () {
+            $(this).toggleClass('music');
+            var audio = new Audio('assets/music/HansZimmer_FirstStep.ogg');
+            
+            if ($(this).hasClass('music')) {
+                audio.loop = true; // 반복재생
+                audio.volume = 0.5; // 음량 설정
+                audio.play(); // 재생
+            } 
+            else if (!$(this).hasClass('music')) {
+                audio.pause();
+            }
+            else {
+                audio.pause();// 멈추기가 안된다
+            }
+            console.log($(this));
+        });
 });
