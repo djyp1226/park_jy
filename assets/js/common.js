@@ -3,10 +3,14 @@ $(document).ready(function () {
   var _gnb = $('#gnb');
   var _first = _gnb.find('[data-link="first"]'); //$('#nav_box button')
   var _last = _gnb.find('[data-link="last"]');
+  var _dim;
 
   $('#nav_box button').on('click', function () {
-    var _dim;
     if ($(this).parent().hasClass('on')) { //열려진 경우라면
+      console.log(_dim.attr('id'));
+      _dim.stop().fadeOut('fast', function () {
+        $(this).remove();
+      });
       $('#nav_box').stop().animate({right: '-750px'}, 700, function () {
         $(this).children('#gnb').css({visibility: 'hidden'});
       });
@@ -14,7 +18,7 @@ $(document).ready(function () {
 
     } else {
       $('#nav_box').before('<div id="dim"></div>');
-      _dim =$('#dim');
+      _dim = $('#dim');
       _dim.stop().fadeIn('fast');
       _gnb.css({visibility: 'visible'});
       $(this).parent().stop().animate({right: 0}, 700, function () {
