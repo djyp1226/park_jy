@@ -55,14 +55,14 @@ $(document).ready(function () {
 
   //fade 
   var timer = 0;
-  // $(window).on('scroll', function () {
-  //   clearTimeout(timer);
+  $(window).on('scroll', function () {
+    clearTimeout(timer);
 
-  //   timer = setTimeout(function () {
-  //     var scrollY = $(this).scrollTop();
-  //     $('.fade').each(function () {
-  //       if (scrollY > $(this).offset().top - 900) $(this).addClass('on');
-  //     });
-  //   }, 50); //시간 간격을 적어주지 않아서 계속 오류를 발생시키고 느려 지네요
-  // });
+    timer = setTimeout(function () {
+      var scrollY = $(this).scrollTop();
+      $('.fade').each(function () {
+        if (scrollY > $(this).offset().top - 900) $(this).addClass('on');
+      });
+    }, 50); //시간 간격을 적어주지 않아서 계속 오류를 발생시키고 느려 지네요
+  });
 });
