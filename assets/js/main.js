@@ -48,22 +48,17 @@ $(document).ready(function () {
 
     //메인 음악(script 형식)
     var bgmAudio = document.getElementById("bgmAudio");
-
     function playAudio() {
         bgmAudio.play();
     }
-
     function pauseAudio() {
         bgmAudio.pause();
     }
-
-    // #cnt1 대신 #index로 바뀌었군요
     $("#index .bgm button").on('click', function () {
         if ($(this).hasClass('bgm_play')) playAudio();
         else pauseAudio();
     });
 
     //메인 아이콘
-        var center = $('#cnt_wrap #index .center .center_menu');
-
+    // var center = $('#cnt_wrap #index .center .center_menu');
 });
