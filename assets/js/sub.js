@@ -32,11 +32,7 @@ $(document).ready(function () {
     // gsap.to('#pj_more_wrap #bioterm_wrap #bio5 ul li', {top: '100px', width: '1000px', ease: "slow.easeInOut", duration: 3});
     $('#bio5 ul li').each(function (index, element) {
       if (scrollY > $(this).offset().top - 500) {
-        if (index % 2 === 0){ //짝수
-          gsap.to(element, 2, {y: 0, x: 0,ease: "power1.bounce",duration: 3});
-        } else { //홀수
-          gsap.to(element, 2, {y: 0,x: 0,ease: "power1.bounce",duration: 3});
-        }
+          gsap.to(element, {y: 0, x: 0,ease: "power1.bounce",duration: 3, opacity : 1});
       }
     });
     /* from이 안되어서 to로 변경함
